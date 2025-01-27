@@ -1,0 +1,167 @@
+After downloading git from https://git-scm.com/downloads install it.
+
+Create a new folder on desktop change the name as anything like "all about git" and open it. Then right click inside that folder, Right click--> Open git bash
+
+Then configure,
+
+--> to know who is writing code or commiting code in git we can configure with our user name and user email. So that it clarifes who is using and making changes to code
+
+1. git config --gobal user.name Gunjan     -->  To configure user name
+
+2. git config --global user.email sushreekfkjfk@gmail.com   --> to configure email id
+ 
+3. git config --global user.name     ---> to check the user name
+
+4. git config --global user.email     --> to check the email
+
+5. code .   ---> To open vs code 
+
+These all are terminals. Unix terminals we are using in windows
+
+6. clear   ---> to clear the screen
+
+7. git init  ---> Initialize empty repository inside the git folder we create in desktop
+
+8. ls -lart  ---> To check hidden items in the folder
+
+9. git status  --> To know the status like how many commits, about branch
+
+
+#####################################   Terms we use in GIT  ################################################
+
+There are 4 stages Untracked, Unmodified, Modified, Staged
+
+ Untracked Means we have just created the repository but haven't created any files yet. But when we add the file it goes straight to Staged area. Staging area is like my file is ready to commit or upload so it'll stay in staging area Untracked is 1st then goes to 2nd level i.e Staged. Then goes to unmodified level after commiting. If we edit the file or add the code inside the file it shows modified. Then aain we have to send the file to staged level and commit. The loop goes like this.
+We can remove the file after it shows untracked.
+
+
+
+###############################################################################################################
+
+
+10. touch about.html    --> To create empty file we use touch command.
+
+11. git add filename   ---> To add file in git
+
+  eg: git add about.html
+  
+12. git status   --->To check status   
+
+13. git add -A --->To add all files a a time
+
+Now when you check the status you can see all files are added and are in staged state
+
+Now we have to commit
+
+14. git commit -m "The 1st commit" ---> To commit the code or files
+
+15. git checkout about.html  ---> If someone deletes or bymistakenly we deleted files after commiting then we can recover throght this command
+
+
+Now if all the files got deleted then,
+
+  >  code . --> To open vs code
+  > git checkout -f  ---> It matches all previous files which are deleted
+  
+  
+16. git checkout -f   ---> To get all files which ll are deleted.
+
+17. git log  ---> Shows the time, date, name, email id, and how many times we have commited.
+
+18 . git log -p -1   ---> Shows only last one commit with all details and diff (Diff means)
+
+19. q ---> To get out of that page 
+
+Now you create another file, [touch Contact.html] --> Write some code like html:5 and write some stuff
+Check status [git status] --> You can see untracked file as contact.html 
+
+Add this file with the command [git add -A]
+again check status git status you can see it shows contact.html as new file
+
+Now modify that file by writing something inside code
+
+Whenever you modify, we have to add every time [git add -A]
+Now commit  [git commit -m "Adding the new feature"]
+
+20. git commit -a -m "Skipping the staged area"   ---> After changing some code if you don't want to send the codes to staging area and direct yu can commit by using this command.
+
+21. git log -p -2  --> To check last two logs
+
+22. ls  ---> hows all fils present in the folder
+
+23. pwd  ---> Shows the path the folder or the project present
+
+24. git rm --cached delete.html  ---> To convert tracked file to untrack (removed from staging area)
+
+25. git add -A   --> Untracked file to tracked file
+
+26. git commit -m "This is waste file" --> To commit tracked file
+
+27. git rm delete.html  ----> It deletes the file from folder or hardisk.
+
+28.  git commit -m "Deleted the waste html file" ---> To show the user that these all are happening or deleted. So that if somene using his they willget to know by reading the commit message.
+
+29. git rm -f delete.html ---> To forcefully delete the file from hard disk so tht it won't be viible in the folder it self if some problem happens while normally deleting.
+
+30. git status -s  ---> Shows the recent changed you made in a file
+
+31. touch .gitignore ---> We create this gitignore and it is used to keep some files which we ignore and we don't want them to be tracked. These files are unwanted files. We just have to write the name of the file inside this .gitignore file. it'll ignore same file name no matter where if the same file name present inside another folder inside the project.
+
+                     --> and to ignore any folder we just have to write the folder name with '/' in the beginning of the name eg:-- /myfile
+					 --> If you want to ignore ome files which has .cpp or .html or .xmlthen you can just write .cpp or .html or .xml inside ignore
+					 --> If you want to ignore all log files but you don't know the name of all log files, then write '*.log' inside gitignore
+					 
+
+
+###########################################    About git Branch     ########################################
+
+So main branch is the master branch and everyne can see that and do only hings which are correct or nothing wrong.
+
+When you are not sure that the file you created will be approved by your seniors or not that tim you create a copy of the main branch and keep the files there before getting approval.
+
+
+32. git branch   --> to see the branch
+
+33. git branch updatebranch  --> To create another branch
+
+34. git checkout updatebranch    ---> To switch from main branch to another branch. Now if you make some changes like update the file or create new file, then again i you switch to main branch the changes won't show there.
+
+35. git checkout main  ---> Before merging the update branch to main branch, we have to switch to main branch.
+s
+36. git merge updatebranch  --> all code from updatebranch will be merged to main branch
+
+35. git checkout -b nodeintegration  ---> Direct create a new branch and switchs
+
+36. git remote add origin https://github.com/Gunjan1994/All-about-GIT.git --> The git repository path where we'll upload all our code
+
+37. git remote  ---> Shows where we are like in oigin or somewhere else
+
+38. git remote -v  ---> Shows from where to fetch and to where push
+
+39. git push -u origin main  ---> To push code
+
+40. git clone https://github.com/bradtraversy/50projects50days.git JSprojectCopid   --->To copy/clone someone else's code from git to my local computer 1st goto their code and copy from  code, click on code button abd clone HTTPS URL,  copy that path and after this run this code. The JSprojectCopied is the name of the folder where we are copying the code
+ 
+
+
+					 
+					 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
